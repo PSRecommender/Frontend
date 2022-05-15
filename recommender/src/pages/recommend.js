@@ -19,6 +19,7 @@ function Recommend(){
     }
     return(
         <Container className="recommend mt-5">
+            <h5 className="mb-3">추천 문제</h5>
             <RecommendTable data={data}></RecommendTable>
         </Container>
     )

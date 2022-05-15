@@ -19,7 +19,7 @@ function RecommendTable(props){
             <Container>
                 <Table hover bordered>
                     <thead>
-                        <tr>
+                        <tr className="recommend">
                             <th>문제번호</th>
                             <th>태그</th>
                             <th>레벨</th>

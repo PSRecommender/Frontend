@@ -19,6 +19,7 @@ function RecommendTable(props){
             list.push(
                 <tr key={i}>
                     <td><a href={problem.url}>{problem.pId}</a></td>
+                    <td><a href={problem.url}>{problem.title}</a></td>
                     <td>{tagList}</td>
                     <td>{problem.level}</td>
                 </tr>
@@ -30,6 +31,7 @@ function RecommendTable(props){
                     <thead>
                         <tr className="recommend">
                             <th>문제번호</th>
+                            <th>제목</th>
                             <th>태그</th>
                             <th>레벨</th>
                         </tr>

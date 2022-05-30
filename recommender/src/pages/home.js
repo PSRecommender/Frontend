@@ -75,7 +75,7 @@ function Home(){
                             <div class="col-lg-4">
                                 <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
                                     <h3>학습 레포트</h3>
-                                    <p class="lead mb-0">Provide learning report.</p>
+                                    <p class="lead mb-0">Provide report.</p>
                                 </div>
                             </div>
                             <div class="col-lg-4">
@@ -93,14 +93,14 @@ function Home(){
                             <div class="col-lg-6 order-lg-2 text-white showcase-img showcase-img1" ></div>
                             <div class="col-lg-6 order-lg-1 my-auto showcase-text">
                                 <h2>문제 추천</h2>
-                                <p class="lead mb-0">백준 아이디를 입력하면 알고리즘 학습 시퀀스를 기반으로 문제를 추천해줍니다.</p>
+                                <p class="lead mb-0">백준 아이디를 입력하면 알고리즘 학습 시퀀스를 기반으로 코딩 테스트 관련 알고리즘 문제를 추천해줍니다.</p>
                             </div>
                         </div>
                         <div class="row g-0">
                             <div class="col-lg-6 text-white showcase-img showcase-img2" ></div>
                             <div class="col-lg-6 my-auto showcase-text">
                                 <h2>학습 레포트</h2>
-                                <p class="lead mb-0">학습 유형을 파악하여 알고리즘 유형 중 강한 유형과 약한 유형을 그래프로 보여줍니다.</p>
+                                <p class="lead mb-0">알고리즘 유형 및 레벨 별 푼 문제 수를 그래프로 보여줍니다.</p>
                             </div>
                         </div>
                         <div class="row g-0">

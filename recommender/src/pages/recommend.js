@@ -5,13 +5,14 @@ import axios from "axios";
 
 function Recommend(){
     const [data, setData] = useState(null);
-    const [error, setError] = useState(false)
+    const [error, setError] = useState(null)
     
     const getData = () => {
         let userId = window.location.href.split("?")[1];
         axios.post("/recommend", {userId:userId})
         .then(function(response){
-            if(typeof(response.data.result) === Number) setError(true);
+            if(typeof(response.data.result) === "number") setError(true);
+            else setError(false)
             console.log(typeof(response.data.result));
             console.log(error)
             setData(response.data.result);   
@@ -22,7 +23,7 @@ function Recommend(){
         getData();
     }
     return(
-        error?
+        error || error===null?
         <Container className="recommend mt-5" style={{"text-align":"center"}}>
             <h1>{data}</h1>
         </Container>

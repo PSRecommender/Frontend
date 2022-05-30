@@ -17,11 +17,14 @@ function RecommendTable(props){
             let tag = tags[tags.length-1];
             tagList.push(<a href={tag.url}>{tag.tagName}</a>)
             list.push(
-                <tr key={i}>
-                    <td><a href={problem.url}>{problem.pId}</a></td>
-                    <td>{tagList}</td>
-                    <td>{problem.level}</td>
-                </tr>
+                <a href={problem.url}>
+                    <tr key={i}>
+                        <td>{problem.pId}</td>
+                        <td>{tagList}</td>
+                        <td>{problem.level}</td>
+                    </tr>
+                </a>
+                
             )
         }
         return(

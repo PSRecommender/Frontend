@@ -18,9 +18,12 @@ function Home(){
         setLoading(true);
         axios.get("/valid?userId="+id)
         .then(function(response){
-            if(response.data.check){
+            if(response.data.response_code == 200){
                 setValidId(true);
                 window.location.href = "/recommend?" + id;
+            }
+            else if(response.data.response_code < 0){
+                alert("푼 문제가 없어 문제를 추천할 수 없습니다.")
             }
             else alert("아이디가 맞지 않습니다.");
             setLoading(false);

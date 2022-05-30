@@ -45,10 +45,11 @@ function RecommendTable(props){
     }else{
         return(
             <Container>
-            <Table hover bordered className="mb-3">
+            <Table hover className="mb-3">
                 <thead>
                     <tr className="recommend">
                         <th>문제번호</th>
+                        <th>제목</th>
                         <th>태그</th>
                         <th>레벨</th>
                     </tr>

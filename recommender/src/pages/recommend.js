@@ -12,7 +12,7 @@ function Recommend(){
         axios.post("/recommend", {userId:userId})
         .then(function(response){
             if(typeof(response.data.result) !== Object) setError(true)
-            console.log(response.data.result);
+            console.log(typeof(response.data.result));
             setData([response.data.result]);
             
         })

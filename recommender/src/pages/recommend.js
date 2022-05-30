@@ -11,7 +11,7 @@ function Recommend(){
         let userId = window.location.href.split("?")[1];
         axios.post("/recommend", {userId:userId})
         .then(function(response){
-            if(typeof(response.data.result) !== Object) setError(True)
+            if(typeof(response.data.result) !== Object) setError(true)
             setData(response.data.result);
             
         })

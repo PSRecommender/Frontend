@@ -13,6 +13,7 @@ function Recommend(){
         .then(function(response){
             if(typeof(response.data.result) !== 'object') setError(true);
             console.log(typeof(response.data.result));
+            console.log(error)
             setData(response.data.result);   
         })
     }

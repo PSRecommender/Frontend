@@ -1,7 +1,6 @@
 import { Container, Spinner, Table, Row, Col } from "react-bootstrap";
 
 function RecommendTable(props){
-    console.log("first"+props.data)
     if(props.data!==null) {
         console.log(props.data);
         let problems = props.data;
@@ -18,7 +17,7 @@ function RecommendTable(props){
             let tag = tags[tags.length-1];
             tagList.push(<a href={tag.url}>{tag.tagName}</a>)
             list.push(
-                <tr key={i}>
+                <tr key={i+1}>
                     <td><a href={problem.url}>{problem.pId}</a></td>
                     <td><a href={problem.url}>{problem.title}</a></td>
                     <td>{tagList}</td>

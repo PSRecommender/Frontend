@@ -23,7 +23,7 @@ function Recommend(){
         getData();
     }
     return(
-        error || error===null?
+        (error || error===null)?
         <Container className="recommend mt-5" style={{"text-align":"center"}}>
             <h1>{data!==-1?data:"문제를 추천할 수 없습니다."}</h1>
         </Container>

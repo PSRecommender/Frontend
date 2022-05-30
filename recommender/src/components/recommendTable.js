@@ -64,6 +64,11 @@ function RecommendTable(props){
                 <Col></Col>
                 문제를 가져오는 중입니다.
                 <Col></Col>
+            </Row>
+            <Row>
+                <Col></Col>
+                처음 서비스를 이용하신다면 시간이 걸릴 수 있습니다. 잠시만 기다려 주세요.
+                <Col></Col>
             </Row> 
         </Container>
         );

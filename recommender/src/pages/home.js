@@ -18,6 +18,7 @@ function Home(){
         setLoading(true);
         axios.get("/valid?userId="+id)
         .then(function(response){
+            console.log(response.data.response_code)
             if(response.data.response_code == 200){
                 setValidId(true);
                 window.location.href = "/recommend?" + id;

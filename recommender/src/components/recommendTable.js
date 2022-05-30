@@ -1,8 +1,9 @@
 import { Container, Spinner, Table, Row, Col } from "react-bootstrap";
 
 function RecommendTable(props){
+    console.log("props" + props.data);
     if(props.data!==null) {
-        console.log("props" + props.data);
+        // console.log("props" + props.data);
         let problems = props.data;
         let list = []
         for(let i = 0;i<problems.length;i++){

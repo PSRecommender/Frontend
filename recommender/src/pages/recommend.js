@@ -7,8 +7,8 @@ function Recommend(){
     const [data, setData] = useState(null);
     
     const getData = () => {
-        let id = window.location.href.split("?")[1];
-        axios.post("/recommend", {id:id})
+        let userId = window.location.href.split("?")[1];
+        axios.post("/recommend", {userId:userId})
         .then(function(response){
             setData(response.data);
         })

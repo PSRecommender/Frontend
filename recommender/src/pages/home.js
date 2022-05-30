@@ -1,11 +1,12 @@
 import { useState } from "react";
-import {Button, Container, Form, Row, Col} from "react-bootstrap";
+import {Button, Container, Form, Row, Col, Spinner} from "react-bootstrap";
 import axios from "axios";
 
 function Home(){
     const [validated, setValidated] = useState(false);
     const [validId, setValidId] = useState(false);
     const [id, setId] = useState();
+    const [loading, setLoading] = useState(false);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -14,13 +15,15 @@ function Home(){
             e.stopPropagation();
         }
         setValidated(true);
-        axios.get("/crawling?userId="+id)
+        setLoading(true);
+        axios.get("/valid?userId="+id)
         .then(function(response){
-            if(response.data){
+            if(response.data.check){
                 setValidId(true);
                 window.location.href = "/recommend?" + id;
             }
             else alert("아이디가 맞지 않습니다.");
+            setLoading(false);
         })
     }
 
@@ -41,7 +44,17 @@ function Home(){
                                                 <Form.Control size="lg" required type="text" placeholder="백준 아이디" onChange={handleChange}></Form.Control>
                                             </Col>
                                             <Col md={"auto"}>
-                                                <Button size="lg" id="submitButton" type="submit">Submit</Button>
+                                                {loading?
+                                                <Button size="lg" id="submitButton" disabled>
+                                                    <Spinner 
+                                                        as="span"
+                                                        animation="border"
+                                                        role="status"
+                                                        size="sm"
+                                                        aria-hidden="true">
+                                                    </Spinner>
+                                                </Button>:
+                                                <Button size="lg" id="submitButton" type="submit">Submit</Button>}
                                             </Col>
                                         </Row>
                                     </Form>

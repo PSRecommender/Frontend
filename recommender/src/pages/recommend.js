@@ -115,7 +115,7 @@ function Recommend(){
                 <RecommendTable data={data}></RecommendTable>
             </Container>
             
-            <Container className="recommend" style={{"backgroundColor":"#EBF5FF", "padding":"20px"}}>
+            <Container className="recommend mb-4" style={{"backgroundColor":"#EBF5FF", "padding":"20px"}}>
                 <h5 className="mb-4">주요 알고리즘 추천 문제</h5>
                 <RecommendTable data={data}></RecommendTable>
             </Container>

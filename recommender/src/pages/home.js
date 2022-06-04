@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from 'react-router-dom';
+import { Link } from "react-scroll"
 import {Button, Container, Form, Row, Col, Spinner} from "react-bootstrap";
 import axios from "axios";
 
@@ -70,47 +71,48 @@ function Home(){
                         </div>
                     </div>
                 </header>
-                <section className="features-icons bg-light text-center">
+                <section className="features-icons text-center py-0">
                     <div className="container">
-                        <div className="row">
-                            <div className="col-lg-4">
-                                <div className="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+                        <div className="row my-2">
+                            <Link to="1" spy={true} smooth={true} className="col" style={{"border":"1px #E0EBFF solid", "backgroundColor":"#E0EBFF", "paddingTop":"150px", "paddingBottom":"150px", "width":"33%", "userSelect":"none", "marginRight":"0.5%"}}>
+                                <div className="features-icons-item mx-auto">
                                     <h3>문제 추천</h3>
                                     <p className="lead mb-0">Recommend algorithm problem.</p>
                                 </div>
-                            </div>
-                            <div className="col-lg-4">
-                                <div className="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-                                    <h3>학습 레포트</h3>
-                                    <p className="lead mb-0">Provide report.</p>
-                                </div>
-                            </div>
-                            <div className="col-lg-4">
-                                <div className="features-icons-item mx-auto mb-0 mb-lg-3">
-                                    <h3>간편한 사용</h3>
-                                    <p className="lead mb-0">Easy to use.</p>
-                                </div>
-                            </div>
+                            </Link>
+                            <Link to="2" spy={true} smooth={true} className="col" style={{"border":"1px #E0EBFF solid", "backgroundColor":"#E0EBFF", "paddingTop":"150px", "paddingBottom":"150px", "width":"33%", "userSelect":"none", "marginRight":"0.5%"}}>                               
+                                    <div className="features-icons-item mx-auto">
+                                        <h3>학습 레포트</h3>
+                                        <p className="lead mb-0">Provide report.</p>
+                                    </div>                            
+                            </Link>
+                            <Link to="3" spy={true} smooth={true} className="col" style={{"border":"1px #E0EBFF solid", "backgroundColor":"#E0EBFF", "paddingTop":"150px", "paddingBottom":"150px", "width":"33%", "userSelect":"none"}}>                                
+                                    <div className="features-icons-item mx-auto">
+                                        <h3>간편한 사용</h3>
+                                        <p className="lead mb-0">Easy to use.</p>
+                                    </div>                        
+                            </Link>
                         </div>
                     </div>
                 </section>
-                <section className="showcase">
+                
+                <section className="showcase mb-5" style={{"backgroundColor":"#EBF5FF"}}>
                     <div className="container-fluid p-0">
-                        <div className="row g-0">
+                        <div className="row g-0" id="1">
                             <div className="col-lg-6 order-lg-2 text-white showcase-img showcase-img1" ></div>
                             <div className="col-lg-6 order-lg-1 my-auto showcase-text">
                                 <h2>문제 추천</h2>
                                 <p className="lead mb-0">백준 아이디를 입력하면 알고리즘 학습 시퀀스를 기반으로 코딩 테스트 관련 알고리즘 문제를 추천해줍니다.</p>
                             </div>
                         </div>
-                        <div className="row g-0">
+                        <div className="row g-0" id="2">
                             <div className="col-lg-6 text-white showcase-img showcase-img2" ></div>
                             <div className="col-lg-6 my-auto showcase-text">
                                 <h2>학습 레포트</h2>
                                 <p className="lead mb-0">알고리즘 유형 및 레벨 별 푼 문제 수를 그래프로 보여줍니다.</p>
                             </div>
                         </div>
-                        <div className="row g-0">
+                        <div className="row g-0" id="3">
                             <div className="col-lg-6 order-lg-2 text-white showcase-img showcase-img3" ></div>
                             <div className="col-lg-6 order-lg-1 my-auto showcase-text">
                                 <h2>간편한 사용</h2>

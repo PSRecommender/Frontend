@@ -102,14 +102,14 @@ function Home(){
                             <div className="col-lg-6 order-lg-2 text-white showcase-img showcase-img1" ></div>
                             <div className="col-lg-6 order-lg-1 my-auto showcase-text">
                                 <h2>문제 추천</h2>
-                                <p className="lead mb-0">백준 아이디를 입력하면 알고리즘 학습 시퀀스를 기반으로 코딩 테스트 관련 알고리즘 문제를 추천해줍니다.</p>
+                                <p className="lead mb-0">사용자의 알고리즘 학습 시퀀스 기반 추천 문제와 코딩 테스트 주요 알고리즘 유형 별 추천 문제를 제공합니다.</p>
                             </div>
                         </div>
                         <div className="row g-0" id="2">
                             <div className="col-lg-6 text-white showcase-img showcase-img2" ></div>
                             <div className="col-lg-6 my-auto showcase-text">
                                 <h2>학습 레포트</h2>
-                                <p className="lead mb-0">알고리즘 유형 및 레벨 별 푼 문제 수를 그래프로 보여줍니다.</p>
+                                <p className="lead mb-0">최근 푼 100문제에 대해 가장 많이 푼 알고리즘 유형 10개의 레벨 별 푼 문제 수를 그래프로 보여줍니다.</p>
                             </div>
                         </div>
                         <div className="row g-0" id="3">

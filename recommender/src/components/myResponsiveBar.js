@@ -1,5 +1,5 @@
 import { ResponsiveBar } from "@nivo/bar"
-import { Container } from "react-bootstrap";
+import { Container,Spinner,Col,Row } from "react-bootstrap";
 
 function MyResponsiveBar(props){
     if(props.data!=null){
@@ -16,7 +16,7 @@ function MyResponsiveBar(props){
                         'Platinum',
                     ]}
                     indexBy="tag"
-                    margin={{ top: 50, right: 130, bottom: 50, left: 60 }}
+                    margin={{ top: 10, right: 130, bottom: 60, left: 60 }}
                     padding={0.3}
                     valueScale={{ type: 'linear' }}
                     indexScale={{ type: 'band', round: true }}
@@ -38,7 +38,7 @@ function MyResponsiveBar(props){
                         tickRotation: -15,
                         legend: '태그',
                         legendPosition: 'middle',
-                        legendOffset: 40
+                        legendOffset: 50
                     }}
                     axisLeft={{
                         tickSize: 5,
@@ -91,7 +91,15 @@ function MyResponsiveBar(props){
         )
 
     }else{
-        return;
+        return(
+            <Container>
+                <Row className="mb-3">
+                    <Col></Col>
+                    <Spinner animation="border"></Spinner>
+                    <Col></Col>
+                </Row>
+            </Container>
+        );
     }
 
 }

@@ -28,7 +28,7 @@ function RecommendTable(props){
                     <td>{tagList}</td>
                     <td><a href={"https://www.acmicpc.net/problemset?sort=no_asc&tier="+problem.level}>{level}</a></td>
                     <td>{problem.acceptedUserCount}</td>
-                    <td>{problem.averageTries}</td>
+                    <td>{problem.averageTries.toFixed(3)}</td>
                 </tr>
             )
         }

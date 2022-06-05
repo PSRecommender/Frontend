@@ -10,9 +10,9 @@ function Recommend(){
     const [dataB, setDataB] = useState(null);
     const [reportData, setReportData] = useState(null);
     const [error, setError] = useState(false);
-
-    const userId = window.location.href.split("?")[1];
-    console.log(userId)
+    
+    const userId = window.location.href.split('?')[1];
+    console.log(userId);
     
     const getData = () => {
         axios.post("/recommend", {userId:userId})

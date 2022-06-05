@@ -37,8 +37,19 @@ function Recommend(){
     }
     return(
         error?
-        <Container className="recommend" style={{"text-align":"center"}}>
-            <h3>{status!==-1?status:"문제를 추천할 수 없습니다."}</h3>
+        <Container className="recommend mt-5" style={{"textAlign":"center"}}>
+            {
+                status!==-1?
+                <div>
+                    <h1>{status}</h1>
+                    사용자 ID의 형식이 올바르지 않거나, 해당 사용자가 존재하지 않습니다.
+                </div>
+                :
+                <div>
+                    <h3>문제를 추천할 수 없습니다.</h3>
+                    맞은 문제가 1개 이상 존재해야 추천이 가능합니다.
+                </div>   
+            }
         </Container>
         :
         <Container>

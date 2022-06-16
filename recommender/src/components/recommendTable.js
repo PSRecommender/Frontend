@@ -11,17 +11,24 @@ function RecommendTable(props){
             let tagList = [];
             for(let j = 0;j<tags.length-1;j++){
                 let tag = tags[j];
-                tagList.push(<a href={tag.url} key={j}>{tag.tagName}</a>)
+                tagList.push(<a href={"https://www.acmicpc.net/problemset?sort=ac_desc&algo="+tag.bojTagId} key={j}>{tag.displayNames[0].name}</a>)
                 tagList.push(", ") 
             }
             let tag = tags[tags.length-1];
-            tagList.push(<a href={tag.url} key={tags.length-1}>{tag.tagName}</a>)
+            tagList.push(<a href={"https://www.acmicpc.net/problemset?sort=ac_desc&algo="+tag.bojTagId} key={tags.length-1}>{tag.displayNames[0].name}</a>)
+            let level = problem.level;
+            if(level<6) level = "Bronze"+(6-level);
+            else if(level<11) level = "Silver"+(11-level);
+            else if(level<16) level = "Gold"+(16-level);
+            else if(level<21) level = "Platinum"+(21-level);
             list.push(
                 <tr key={i}>
-                    <td><a href={problem.url}>{problem.pId}</a></td>
-                    <td><a href={problem.url}>{problem.title}</a></td>
+                    <td><a href={"https://www.acmicpc.net/problem/"+problem.problemId}>{problem.problemId}</a></td>
+                    <td><a href={"https://www.acmicpc.net/problem/"+problem.problemId}>{problem.titleKo}</a></td>
                     <td>{tagList}</td>
-                    <td>{problem.level}</td>
+                    <td><a href={"https://www.acmicpc.net/problemset?sort=no_asc&tier="+problem.level}>{level}</a></td>
+                    <td>{problem.acceptedUserCount}</td>
+                    <td>{problem.averageTries.toFixed(3)}</td>
                 </tr>
             )
         }
@@ -34,6 +41,8 @@ function RecommendTable(props){
                             <th>제목</th>
                             <th>태그</th>
                             <th>레벨</th>
+                            <th>맞힌사람</th>
+                            <th>평균시도횟수</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -52,6 +61,8 @@ function RecommendTable(props){
                         <th>제목</th>
                         <th>태그</th>
                         <th>레벨</th>
+                        <th>맞힌사람</th>
+                        <th>평균시도횟수</th>
                     </tr>
                 </thead>
             </Table>
